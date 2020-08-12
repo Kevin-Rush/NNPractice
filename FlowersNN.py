@@ -12,7 +12,9 @@ def sigmoid(x):
     return 1/(1 + np.exp(-x))
 
 def squaredError(p, t):
-    return (p - t)**2
+    cost = (p - t)**2
+    slope = 2*(p-t)
+    return p-0.1*slope
 
 w1 = np.random.randn()
 w2 = np.random.rand()
